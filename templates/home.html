@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <title></title>
+</head>
+<body>
+    <form action="/predict" method="POST">
+        <input type="text" placeholder="Mileage" name="mileage"/><br />
+        <input type="text" placeholder="Engine" name="engine"/><br />
+        <input type="text" placeholder="Power" name="power"/><br />
+        
+        <select name="Brand">
+            <option selected disabled>Brand</option>
+            <option value="1">Ambassador</option>
+            <option value="2">Audi</option>
+            <option value="3">BMW</option>
+            <option value="4">Bentley</option>
+            <option value="5">Chevrolet</option>
+            <option value="6">Datsun</option>
+            <option value="7">Fiat</option>
+            <option value="8">Force</option>
+            <option value="9">Ford</option>
+            <option value="10">Hindustan</option>
+            <option value="11">Honda</option>
+            <option value="12">Hyundai</option>
+            <option value="13">Isuzu</option>
+            <option value="14">ISUZU</option>
+            <option value="15">Jaguar</option>
+            <option value="16">Jeep</option>
+            <option value="17">Lamborghini</option>
+            <option value="18">Land</option>
+            <option value="19">Mahindra</option>
+            <option value="20">Maruti</option>
+            <option value="21">Mercedes-Benz</option>
+            <option value="22">Mini</option>
+            <option value="23">Mitsubishi</option>
+            <option value="24">Nissan</option>
+            <option value="25">OpelCorsa</option>
+            <option value="26">Porsche</option>
+            <option value="27">Ranault</option>
+            <option value="28">Skoda</option>
+            <option value="29">Smart</option>
+            <option value="30">Tata</option>
+            <option value="31">Toyota</option>
+            <option value="32">Volkswagen</option>
+            <option value="33">Volvo</option>
+        </select>
+        <select name="fuel">
+            <option selected disabled>Fuel</option>
+            <option value="1">CNG</option>
+            <option value="2">Diesel</option>
+            <option value="3">Electric</option>
+            <option value="4">LPG</option>
+            <option value="5">Petrol</option>
+        </select>
+        <select name="transmission">
+            <option selected disabled>Transmission</option>
+            <option value="1">Automatic</option>
+            <option value="2">Manual</option>
+
+        </select>
+        <select name="owner type">
+            <option selected disabled>Owner_Type</option>
+            <option value="1">First</option>
+            <option value="2">Second</option>
+            <option value="3">Third</option>
+            <option value="4">Fourth & above</option>
+
+        </select>
+        <input type="number" name="use" placeholder="used year" />
+
+        <button type="submit" value="submit">Send</button>
+
+    </form>
+    {%if data:%}
+        {{data}}
+    {%endif%}
+</body>
+</html>
